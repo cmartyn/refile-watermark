@@ -35,7 +35,7 @@ module Refile
         composite.compose "Over"    # OverCompositeOp
         #composite.geometry "+20+20" # copy second_image onto first_image from (20, 20)
         composite.dissolve "20,100" # make second_image 50% transparent on top of first image
-        composite.gravity gravity
+        composite.tile true
       end
       result.write img.path
     end
